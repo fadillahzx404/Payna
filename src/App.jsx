@@ -27,6 +27,7 @@ import icon5 from "/icon-product5.png";
 import icon6 from "/icon-product6.png";
 
 function App() {
+  const username = os.userInfo().username;
   return (
     <>
       <nav className="navbar flex px-24 max-sm:px-5 mx-auto py-8 justify-between">
@@ -61,7 +62,7 @@ function App() {
           </a>
         </div>
         <div className="button-login place-self-center py-2 px-8 rounded-3xl text-[#070F18] bg-[#F5F6FB] hover:bg-gray-300 hover:text-gray-600 hover:scale-90 transition duration-300 max-sm:hidden">
-          <a href="">{os.userInfo().username}</a>
+          <a href="">{username}</a>
         </div>
       </nav>
       <div className="container [@media(width:768px)]:px-5 px-28 mt-12 mx-auto max-sm:px-5 max-sm:mt-5">
