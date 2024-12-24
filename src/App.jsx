@@ -1,7 +1,6 @@
-import { useState } from "react";
-import "./css/App.css";
-import React from "react";
+import os from "os";
 import ReactPlayer from "react-player";
+import "./css/App.css";
 
 //Logo
 import Logo from "/logo.png";
@@ -28,8 +27,6 @@ import icon5 from "/icon-product5.png";
 import icon6 from "/icon-product6.png";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <nav className="navbar flex px-24 max-sm:px-5 mx-auto py-8 justify-between">
@@ -64,7 +61,7 @@ function App() {
           </a>
         </div>
         <div className="button-login place-self-center py-2 px-8 rounded-3xl text-[#070F18] bg-[#F5F6FB] hover:bg-gray-300 hover:text-gray-600 hover:scale-90 transition duration-300 max-sm:hidden">
-          <a href="">Login</a>
+          <a href="">{os.userInfo().username}</a>
         </div>
       </nav>
       <div className="container [@media(width:768px)]:px-5 px-28 mt-12 mx-auto max-sm:px-5 max-sm:mt-5">
